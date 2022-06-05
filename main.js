@@ -32,7 +32,7 @@ onValue(countRef, (snapshot) => {
   buffer = data;
   his.innerText = ' '
   for(var key in buffer){
-    his.innerText += "Blinks: "+buffer[key]['BlinkCount']+" Time: "+buffer[key]['time']+'\n'
+    his.innerText += "Blinks: "+buffer[key]['BlinkCount']+" Time: "+Date(buffer[key]['time']).toLocaleString("en-US")+'\n'
   }
   var notification = new Notification("Alert! Please attend to your patient");
 });
